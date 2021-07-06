@@ -8,16 +8,7 @@ import { title } from "../components/my-component.module.css";
 const IndexPage = () => {
   return (
     <main>
-      {/* <title>Home Page</title>
-      <Title name={"Home"} />
-      <Link to="/about">About</Link>
-
-      <p>
-        Hi there! I'm the proud creator of this site, which I built with Gatsby.
-      </p> */}
-      <Layout pageTitle="Home Page">
-        <p>I'm making this by following the Gatsby Tutorial.</p>
-      </Layout>
+      <h1>Hello</h1>
     </main>
   );
 };
