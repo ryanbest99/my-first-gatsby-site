@@ -15,7 +15,10 @@ const Layout = ({ pageTitle, children }) => {
 };
 
 const Container = styled.section`
-  border: 3px solid blue;
+  border: 10px solid blue;
+  margin: 2rem auto;
+  max-width: 800px;
+  font-family: sans-serif;
 `;
 
 export default Layout;
