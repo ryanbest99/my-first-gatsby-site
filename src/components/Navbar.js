@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 import { FiAlignJustify } from "react-icons/fi";
 import logo from "../assets/images/logo.svg";
 
 const Navbar = () => {
+  const [toggle, setToggle] = useState(false);
+
+  const toggleBtn = (e) => {
+    e.preventDefault();
+    console.log("clicked");
+    setToggle(!toggle);
+  };
+
   return (
     <>
       <nav>
@@ -12,18 +20,24 @@ const Navbar = () => {
             <Link>
               <img src={logo} alt="" srcset="" />
             </Link>
-            <button className="nav-btn">
+            <button className="nav-btn" onClick={toggleBtn}>
               <FiAlignJustify />
             </button>
           </div>
-          <div className="nav-links show-links">
-            <Link to="/" className="nav-link" activeClassName="active-link">
+          <div className={toggle ? "nav-links show-links" : "nav-links"}>
+            <Link
+              to="/"
+              className="nav-link"
+              activeClassName="active-link"
+              onClick={() => setToggle(false)}
+            >
               Home
             </Link>
             <Link
               to="/about"
               className="nav-link"
               activeClassName="active-link"
+              onClick={() => setToggle(false)}
             >
               About
             </Link>
@@ -31,6 +45,7 @@ const Navbar = () => {
               to="/recipe"
               className="nav-link"
               activeClassName="active-link"
+              onClick={() => setToggle(false)}
             >
               Recipe
             </Link>
@@ -38,11 +53,17 @@ const Navbar = () => {
               to="/contact"
               className="nav-link"
               activeClassName="active-link"
+              onClick={() => setToggle(false)}
             >
               Tags
             </Link>
             <div className="nav-link contact-link">
-              <Link to="/contact" className="btn" activeClassName="active-link">
+              <Link
+                to="/contact"
+                className="btn"
+                activeClassName="active-link"
+                onClick={() => setToggle(false)}
+              >
                 Contact
               </Link>
             </div>

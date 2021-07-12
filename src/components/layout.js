@@ -2,14 +2,8 @@ import * as React from "react";
 import Navbar from "./Navbar";
 import "../assets/css/main.css";
 import "@csstools/normalize.css";
-// import {
-//   container,
-//   heading,
-//   navLinks,
-//   navLinkItem,
-//   navLinkText,
-// } from "./layout.module.css";
 import Footer from "./Footer";
+import Navbar2 from "./Navbar2";
 
 const Layout = (props) => {
   const pageTitle = props.pageTitle;
@@ -19,6 +13,8 @@ const Layout = (props) => {
     <>
       <title>{pageTitle}</title>
       <Navbar />
+      {/* <Navbar2 /> */}
+
       <h1>{title}</h1>
       {children}
       <Footer />

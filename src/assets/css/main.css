@@ -377,6 +377,10 @@ form > *:last-child {
   height: 23.9375rem;
 }
 
+.show-linkss {
+  height: 120px;
+}
+
 .nav-link {
   display: block;
   text-align: center;
