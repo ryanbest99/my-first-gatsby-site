@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-const NavLinks = () => {
+const NavLinks = ({ toggle }) => {
   return (
-    <NavLinkss className="">
+    <NavLinkss toggle={toggle}>
       <Link to="/" activeClassName="active-linkk" className="nav-linkk">
         Home
       </Link>
@@ -24,6 +24,7 @@ const NavLinks = () => {
 const NavLinkss = styled.div`
   border: 3px solid yellow;
   /* height: 0; */
+  /* max-height: ${({ toggle }) => (toggle ? "300px" : "0")}; */
 
   .active-linkk {
     color: red;

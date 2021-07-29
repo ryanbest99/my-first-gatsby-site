@@ -4,6 +4,7 @@ import "../assets/css/main.css";
 import "@csstools/normalize.css";
 import Footer from "./Footer";
 import Navbar2 from "./Navbar2";
+import Navbar3 from "./Navbar3";
 
 const Layout = (props) => {
   const pageTitle = props.pageTitle;
@@ -14,6 +15,7 @@ const Layout = (props) => {
       <title>{pageTitle}</title>
       <Navbar />
       {/* <Navbar2 /> */}
+      <Navbar3 />
 
       <h1>{title}</h1>
       {children}

@@ -3,9 +3,9 @@ import { Link } from "gatsby";
 import { FiAlignJustify } from "react-icons/fi";
 import logo from "../assets/images/logo.svg";
 import styled from "styled-components";
-import NavLinks from "./NavLinks";
+import NavLinks2 from "./NavLinks2";
 
-const Navbar2 = () => {
+const Navbar3 = () => {
   const [toggle, setToggle] = useState(false);
 
   const toggleBtn = (e) => {
@@ -26,7 +26,7 @@ const Navbar2 = () => {
           </NavBtn>
         </NavHeader>
         {/* {toggle ? <NavLinks /> : ""} */}
-        <NavLinks toggle={toggle} className="nav-links" />
+        <NavLinks2 toggle={toggle}></NavLinks2>
       </NavCenter>
     </Nav>
   );
@@ -61,4 +61,4 @@ const NavBtn = styled.button`
   }
 `;
 
-export default Navbar2;
+export default Navbar3;
